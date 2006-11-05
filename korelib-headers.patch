@@ -1,0 +1,29 @@
+--- korelib-1.0/include/kore/metainfo.h~	2002-08-23 23:41:22.000000000 +0300
++++ korelib-1.0/include/kore/metainfo.h	2006-11-05 12:24:50.437346845 +0200
+@@ -7,7 +7,7 @@
+ #include <map>
+ #include <iostream.h>
+ #else
+-#include "config.h"
++#include <kore/config.h>
+ #ifdef EXT_HASH_MAP
+ #include <ext/hash_map>
+ #else
+--- korelib-1.0/configure.in~	2002-08-23 23:41:22.000000000 +0300
++++ korelib-1.0/configure.in	2006-11-05 12:29:50.484116039 +0200
+@@ -82,3 +82,5 @@
+     demo/Makefile demo/koretest/Makefile
+     samples/Makefile samples/koredlg/Makefile samples/koredlg/if/Makefile
+     samples/koredlg/impl/Makefile samples/koredlg/impl/cout/Makefile )
++
++ln -sf ../../config.h include/kore
+--- korelib-1.0/include/kore/Makefile.am~	2006-11-05 12:30:17.764732179 +0200
++++ korelib-1.0/include/kore/Makefile.am	2006-11-05 12:31:51.986861248 +0200
+@@ -2,6 +2,7 @@
+ AUTOMAKE_OPTIONS = foreign
+ koreinclude_HEADERS = \
+ 		kore.h \
++		config.h\
+ 		metainfo.h\
+ 		interface.h\
+ 		componentproxy.h\
