@@ -3,7 +3,7 @@
 %bcond_without	static_libs # don't build static libraries
 #
 Summary:	Korelib - C++ framework for developing plugin-based applications
-Summary(pl):	Korelib - framework C++ do tworzenia aplikacji bazowanych na pluginach
+Summary(pl):	Korelib - szkielet C++ do tworzenia aplikacji opartych na wtyczkach
 Name:		korelib
 Version:	1.0
 Release:	0.3
@@ -12,7 +12,11 @@ Group:		Libraries
 Source0:	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/%{name}-%{version}.tar.gz
 Patch0:		%{name}-headers.patch
 # Source0-md5:	ee220ca3cf6efddf0427ff6a3a5cad36
+URL:		http://www.thekompany.com/projects/korelib/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,8 +24,8 @@ Korelib is a extensible C++ framework for developing plugin-based
 applications.
 
 %description -l pl
-Korelib jest rozszerzalnym frameworkiem C++ do tworzenai aplikacji
-bazowanych na pluginach.
+Korelib jest rozszerzalnym szkieletem C++ do tworzenia aplikacji
+opartych na wtyczkach.
 
 %package devel
 Summary:	Header files for Korelib library
