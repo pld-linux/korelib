@@ -3,7 +3,7 @@
 %bcond_without	static_libs # don't build static libraries
 #
 Summary:	Korelib - C++ framework for developing plugin-based applications
-Summary(pl.UTF-8):   Korelib - szkielet C++ do tworzenia aplikacji opartych na wtyczkach
+Summary(pl.UTF-8):	Korelib - szkielet C++ do tworzenia aplikacji opartych na wtyczkach
 Name:		korelib
 Version:	1.0
 Release:	0.3
@@ -29,7 +29,7 @@ opartych na wtyczkach.
 
 %package devel
 Summary:	Header files for Korelib library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki Korelib
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Korelib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -41,7 +41,7 @@ Pliki nagłówkowe biblioteki Korelib.
 
 %package static
 Summary:	Static Korelib library
-Summary(pl.UTF-8):   Statyczna biblioteka Korelib
+Summary(pl.UTF-8):	Statyczna biblioteka Korelib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
